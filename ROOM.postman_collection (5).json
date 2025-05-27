@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "dc08e45f-0fe5-4c6c-a160-9a04a6515713",
+		"name": "ROOM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43465746",
+		"_collection_link": "https://sqlserver-0757.postman.co/workspace/ASUMI_ROOM~67492e8c-8ee6-4f40-88c3-ca603c95c393/collection/43465746-dc08e45f-0fe5-4c6c-a160-9a04a6515713?action=share&source=collection_link&creator=43465746"
+	},
+	"item": [
+		{
+			"name": "FOLDER",
+			"item": [
+				{
+					"name": "READ | LISTAR",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/v1/api/room",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1",
+								"api",
+								"room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ | LISTAR ESTADO",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/v1/api/room/estado/A",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1",
+								"api",
+								"room",
+								"estado",
+								"A"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ | LISTAR x ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/v1/api/room/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1",
+								"api",
+								"room",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREARTE | CREAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"room_number\": \"10\",\r\n    \"room_type\": \"familiar\",\r\n    \"activity_room\": \"Disponible\",\r\n    \"room_description\": \"Habitación amplia para familia\",\r\n    \"level\": \"2er Piso\",\r\n    \"cost_per_day\": 180,\r\n    \"registrationd_date\": \"2025-05-25T22:33:37\",\r\n    \"modification_date\": \"2025-05-25T22:33:37\",\r\n    \"state\": \"A\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/v1/api/room/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1",
+								"api",
+								"room",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE | EDITAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_room\": 1,\r\n    \"room_number\": \"110\",\r\n    \"room_type\": \"familiar\",\r\n    \"activity_room\": \"Disponible\",\r\n    \"room_description\": \"Habitación amplia para familia\",\r\n    \"level\": \"2er Piso\",\r\n    \"cost_per_day\": 180,\r\n    \"registrationd_date\": \"2025-05-29T22:33:37\",\r\n    \"modification_date\": \"2026-05-25T22:33:37\",\r\n    \"state\": \"A\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/v1/api/room/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1",
+								"api",
+								"room",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESTORE_LOGICAL",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"id_room\": 1,\r\n    \"room_number\": \"110\",\r\n    \"room_type\": \"familiar\",\r\n    \"activity_room\": \"Disponible\",\r\n    \"room_description\": \"Habitación amplia para familia\",\r\n    \"level\": \"2er Piso\",\r\n    \"cost_per_day\": 180,\r\n    \"registrationd_date\": \"2025-05-25T22:33:37\",\r\n    \"modification_date\": \"2025-05-25T22:40:01\",\r\n    \"state\": \"A\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/v1/api/room/restore/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1",
+								"api",
+								"room",
+								"restore",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_LOGICAL",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/v1/api/room/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"v1",
+								"api",
+								"room",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
